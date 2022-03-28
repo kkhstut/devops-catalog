@@ -9,7 +9,7 @@ metadata:
   annotations:
     ingress.kubernetes.io/ssl-redirect: "false"
 spec:
-  ingressClass: "nginx"
+  ingressClassName: "nginx"
   rules:
   - http:
       paths:
