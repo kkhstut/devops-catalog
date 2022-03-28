@@ -1,0 +1,10 @@
+apiVersion: v2
+description: A Helm chart
+name: go-demo-9
+version: 0.0.2
+appVersion: 0.0.2
+dependencies: 
+- name: mongodb
+  alias: go-demo-9-db
+  version: 11.0.6 
+  repository: https://charts.bitnami.com/bitnami

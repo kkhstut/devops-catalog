@@ -1,0 +1,22 @@
+{{- if .Values.istio.enabled }}
+{{- else }}
+---
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ template "fullname" . }}
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: {{ .Values.ingress.host }}
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: {{ template "fullname" . }}
+            port:
+              number: {{ .Values.service.externalPort }}
+{{- end }}
