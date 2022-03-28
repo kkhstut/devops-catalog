@@ -1,0 +1,17 @@
+---
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: go-demo-9
+  annotations:
+    kubernetes.io/ingress.class: nginx
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: go-demo-9.acme.com
+    http:
+      paths:
+      - backend:
+          serviceName: go-demo-9
+          servicePort: 80

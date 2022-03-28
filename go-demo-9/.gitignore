@@ -1,4 +1,2 @@
-/mongodb*
-/requirements.lock
-/charts/*
-/*.tgz
+/bin
+*.tgz
